@@ -7,7 +7,6 @@ tags: [random, exciting-stuff]
 
 This is my first post, how exciting!
 
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <title>kaggle_titanic_notebook-Copy1</title>
