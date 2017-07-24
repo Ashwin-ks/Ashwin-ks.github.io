@@ -504,7 +504,7 @@ df.hist(column='Age',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_27_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_27_1.png)
 
 
 On plotting the histogram for the 'Age' variable we are able to see it is slightly right skewed and therefore we can use the median value 20-30 to fill the missing values
@@ -537,7 +537,7 @@ df_test.hist(column='Age',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_30_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_30_1.png)
 
 
 
@@ -583,7 +583,7 @@ df.hist(column='Age',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_34_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_34_1.png)
 
 
 
@@ -601,7 +601,7 @@ df_test.hist(column='Age',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_35_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_35_1.png)
 
 
 Filling the missing values with median is better than deleting entire rows with missing values, even though the median value 28 might be off the actual values.In practice imputing the missing data (estimating age based on other variables) might have been a better option, but we'll stick with this for now.
@@ -625,7 +625,7 @@ df['Fare'].plot(kind='box',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_38_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_38_1.png)
 
 
 
@@ -642,7 +642,7 @@ df_test['Fare'].plot(kind='box',
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_39_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_39_1.png)
 
 
 In a boxplot, the central box represents 50% of the data and the central bar represents the median. The dotted lines with bars on the ends are "whiskers" which encompass the great majority of the data and points beyond the whiskers indicate uncommon values. In this case, we have some uncommon values that are so far away from the typical value that the box appears squashed in the plot: this is a clear indication of outliers. Indeed, it looks like one passenger paid almost twice as much as any other passenger. Even the passengers that paid between 200 and 300 are far higher than the vast majority of the other passengers.
@@ -1110,7 +1110,7 @@ df_train[['Age','SibSp','Parch','Fare']].hist(figsize =[11,11])
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_68_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_68_1.png)
 
 
 As we can see the continuous variable features are not having the same range of values and are not properly scaled,it is very important to implement feature scaling to improve the performance of the model.
@@ -1154,7 +1154,7 @@ np.var(X[:,0])
 
 
 
-![png](kaggle_titanic_notebook_files/kaggle_titanic_notebook_71_1.png)
+![png](ipynb/kaggle_titanic_notebook_files/kaggle_titanic_notebook_71_1.png)
 
 
 
