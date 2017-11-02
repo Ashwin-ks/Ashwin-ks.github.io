@@ -1,3 +1,9 @@
+---
+layout: post
+title: Titanic: Machine learning from Disaster
+subtitle: Python implementation of Kaggle's Titanic Machine learning problem.
+bigimg: /kaggle_titanic_notebook_files/head.png
+---
 
 # Titanic Kaggle Challenge
 The Titanic challenge on Kaggle is a competition in which the task is to predict the survival or the death of a given passenger based on a set of variables describing him such as his age, his sex, or his passenger class on the boat.
