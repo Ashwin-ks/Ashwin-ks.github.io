@@ -2,7 +2,7 @@
 layout: post
 title: Titanic Machine learning from Disaster
 subtitle: Python implementation of Titanic Machine learning competition from Kaggle
-bigimg: \img\head.png
+bigimg: /img/head.png
 ---
 
 # Titanic Kaggle Challenge
