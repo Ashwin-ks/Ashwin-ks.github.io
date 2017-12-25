@@ -6,7 +6,7 @@ subtitle: Keen learner with passion for Data Science and Machine learning levera
 
 My name is **Ashwin K.** This is my personal website where you can find my projects,thoughts and learnings in field of Machine learning and Data Science predominantly using Python ecosystem libraries - Numpy,Scipy,Pandas,Scikit-learn,Matplotlib:
 
-- I have work experience of around 2 years with good understanding on physical and logical structures of relational databases(Oracle).Was part of Database architect team which involved to analyze, design, structure and build database systems for enterprise applications.
+- 3+ years of IT experience with working knowledge in fields of Python Development,Analytics,Data Science,Cloud and RDBMS.
 - Passionate about data with great interest in using Data Science methodologies to solve business problems,continuous learner developing skills to become competent.
 
 
