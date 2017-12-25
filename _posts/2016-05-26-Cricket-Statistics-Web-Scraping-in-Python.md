@@ -59,7 +59,7 @@ soup=BeautifulSoup(page_html,"html.parser")
 ```
 If we inspect element on the webpage and find the country links for 2015 worldcup as below:
 
-{% raw}
+```
 <li><a name="&amp;lpos=quicklink_Squads" href="/icc-cricket-world-cup-2015/content/squad?object=509587">Squads</a>
 
 <div class="dd_wrap">
@@ -87,7 +87,8 @@ If we inspect element on the webpage and find the country links for 2015 worldcu
    </ul>
 	</div>
     </li>
-{% endraw %}
+```
+
 We can see under the li items the a attribute has the links for each country which we would fetch using the soup objects findall method
 
 ```python
@@ -192,25 +193,25 @@ We are selecting the year of which we filter the stats of each player and store.
 We can check the link of MS Dhoni as below using filtered stats
 
 <http://stats.espncricinfo.com/ci/engine/player/28081.html?class=2;template=results;type=batting;view=innings;year=2015>
-{% raw %}
-<tr class="data1">
-  <td class="left">filtered</td>
-  <td>20</td>
-  <td>17</td>
-  <td>3</td>
-  <td>640</td> --------->Runs Scored
-  <td>92*</td> --------->High Score
-  <td>45.71</td>--------->Average
-  <td>737</td>
-  <td>86.83</td>
-  <td>0</td>
-  <td>4</td>
-  <td>0</td>
-  <td>50</td>
-  <td>11</td>
-  <td></td>
- </tr>
-{% endraw %}
+
+<tr class="data1">  
+  <td class="left">filtered</td>  
+  <td>20</td>  
+  <td>17</td>  
+  <td>3</td>  
+  <td>640</td> --------->Runs Scored  
+  <td>92*</td> --------->High Score  
+  <td>45.71</td>--------->Average  
+  <td>737</td>  
+  <td>86.83</td>  
+  <td>0</td>  
+  <td>4</td>  
+  <td>0</td>  
+  <td>50</td>  
+  <td>11</td>  
+  <td></td>  
+ </tr>  
+
 We create the soup object on the url and utilize the findall method for each object to fetch the stats for the selected year.
 
 In order to fetch the stats in order we assign the positions for fetching from td attribute in case of bowling and fielding according to our requirement.
