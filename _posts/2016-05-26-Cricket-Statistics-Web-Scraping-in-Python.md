@@ -9,7 +9,7 @@ bigimg: /img/cricket.png
 
 We will be using BeautifulSoup and request for the Web scraping part,a light-weight sqlite database to store the information fetched for further querying and analyis.
 
-This webscraping project involves scraping of Cricket player information such as Bowling and Batting stats of players who featured in the 2015 Cricket World Cup held in Australia.The data fetched would be stored in a database for easier retrieval during analysis.
+This webscraping project involves scraping of Cricket player information such as Bowling and Batting stats of players for a particular year(2015 in this case) who featured in the 2015 Cricket World Cup .The data fetched would be stored in a database for easier retrieval during analysis.
 
 
 ```python
@@ -190,10 +190,11 @@ Now we iterate over each players action(batting and bowling) and player to fetch
 
 We are selecting the year of which we filter the stats of each player and store.Here we are selecting the 2015 year and therefore we are fetching each player stats in international matches played in year 2015.
 
-We can check the link of MS Dhoni as below using filtered stats
+We can check the link of MS Dhoni as below using filtered stats from espncricinfo as below:
 
 <http://stats.espncricinfo.com/ci/engine/player/28081.html?class=2;template=results;type=batting;view=innings;year=2015>
 
+```
 <tr class="data1">  
   <td class="left">filtered</td>  
   <td>20</td>  
@@ -211,13 +212,14 @@ We can check the link of MS Dhoni as below using filtered stats
   <td>11</td>  
   <td></td>  
  </tr>  
+```
 
-We create the soup object on the url and utilize the findall method for each object to fetch the stats for the selected year.
+We create the soup object on the url and utilize the findall method for each object to fetch the stats for the selected year.(2015)
 
 In order to fetch the stats in order we assign the positions for fetching from td attribute in case of bowling and fielding according to our requirement.
 
 ```python
-year=2015
+year=2015 ##can be changed according to requirement
 for action in play_action:
     for play in play_list:
         pid=play[2]
