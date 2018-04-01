@@ -1,3 +1,9 @@
+---
+layout: post
+title: EDA Housing Prices Kaggle Advanced Regression
+subtitle: Exploratory Data Analysis of the housing prices dataset.
+bigimg: /img/head.png
+---
 
 ## Exploratory Data Analysis
 
