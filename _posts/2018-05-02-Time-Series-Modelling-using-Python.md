@@ -254,7 +254,7 @@ plt.legend()
 
 
 
-![png](/timeseries_python/output_21_1.png)
+![png](/_posts/timeseries_python/output_21_1.png)
 
 
 Due to hourly collected data we are seeing irregularities and  unable to see clear patterns in our data but we can infer here that our data has some increasing trend.In terms of seasonality and cyclic trend it is difficult to check in this plot.Therefore we will resample our data on daily,weekly,monthly and yearly level and visualize to understand the patterns.
@@ -278,7 +278,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_23_0.png)
+![png](/_posts/timeseries_python/output_23_0.png)
 
 
 
@@ -290,7 +290,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_24_0.png)
+![png](/_posts/timeseries_python/output_24_0.png)
 
 
 On resampling at a daily level we can clearly see trend and seasonal patterns emerging from our data.We would use our daily resampled time series data for modelling as it has lesser noise compared to hourly data.
@@ -313,7 +313,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_27_0.png)
+![png](/_posts/timeseries_python/output_27_0.png)
 
 
 We can infer a lot of information from these plots on how the passenger inflow varies on different levels.
@@ -349,7 +349,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_31_0.png)
+![png](/_posts/timeseries_python/output_31_0.png)
 
 
 It is clear from this plot that the passenger counts decline from 12AM gradually till 5AM and later picks up from 7AM to 10AM after which the passenger inflow is considerably high through out till 11PM.
@@ -386,7 +386,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_34_0.png)
+![png](/_posts/timeseries_python/output_34_0.png)
 
 
 We can clearly infer more passenger counts during weekdays compared to weekends as we had seen earlier.1
@@ -415,7 +415,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_38_0.png)
+![png](/_posts/timeseries_python/output_38_0.png)
 
 
 
@@ -485,7 +485,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_43_0.png)
+![png](/_posts/timeseries_python/output_43_0.png)
 
 
 
@@ -499,7 +499,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_44_0.png)
+![png](/_posts/timeseries_python/output_44_0.png)
 
 
 ACF - As all lags are close to 1 or atleast greater than confidence interval ,autocorrelation is statisitically significant.
@@ -532,7 +532,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat['Count'], y_hat[
 ```
 
 
-![png](/timeseries_python/output_47_0.png)
+![png](/_posts/timeseries_python/output_47_0.png)
 
 
     r2_score >>> -0.02404216991538255
@@ -567,7 +567,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat['Count'], y_hat[
 ```
 
 
-![png](/timeseries_python/output_49_0.png)
+![png](/_posts/timeseries_python/output_49_0.png)
 
 
     r2_score >>> -6.662202498647111
@@ -622,7 +622,7 @@ moving_average_predict_plot(10)
 ```
 
 
-![png](/timeseries_python/output_52_0.png)
+![png](/_posts/timeseries_python/output_52_0.png)
 
 
     RMSE: 90.9914913199977
@@ -634,7 +634,7 @@ moving_average_predict_plot(5)
 ```
 
 
-![png](/timeseries_python/output_53_0.png)
+![png](/_posts/timeseries_python/output_53_0.png)
 
 
     RMSE: 94.86415250533551
@@ -646,7 +646,7 @@ moving_average_predict_plot(60)
 ```
 
 
-![png](/timeseries_python/output_54_0.png)
+![png](/_posts/timeseries_python/output_54_0.png)
 
 
     RMSE: 129.40415262528867
@@ -675,7 +675,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat_avg['Count'], y_
 ```
 
 
-![png](/timeseries_python/output_57_0.png)
+![png](/_posts/timeseries_python/output_57_0.png)
 
 
     r2_score >>> -0.4765720330640295
@@ -710,7 +710,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat_avg['Count'], y_
 ```
 
 
-![png](/timeseries_python/output_59_0.png)
+![png](/_posts/timeseries_python/output_59_0.png)
 
 
     r2_score >>> -0.05443082552571954
@@ -745,7 +745,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat_avg['Count'], y_
 ```
 
 
-![png](/timeseries_python/output_61_0.png)
+![png](/_posts/timeseries_python/output_61_0.png)
 
 
     r2_score >>> 0.06943531380186796
@@ -782,7 +782,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat_avg['Count'], y_
 ```
 
 
-![png](/timeseries_python/output_64_0.png)
+![png](/_posts/timeseries_python/output_64_0.png)
 
 
     r2_score >>> 0.4439655242397562
@@ -823,7 +823,7 @@ plt.show()
 ```
 
 
-![png](/timeseries_python/output_69_0.png)
+![png](/_posts/timeseries_python/output_69_0.png)
 
 
 Using time-series decomposition makes it easier to quickly identify a changing mean or variation in the data. The plot above clearly shows the upwards trend of our data, along with its seasonality. These can be used to understand the structure of our time-series. The intuition behind time-series decomposition is important, as many forecasting methods build upon this concept of structured decomposition to produce forecasts.
@@ -848,7 +848,7 @@ plt.gcf().set_size_inches(18,6)
 ```
 
 
-![png](/timeseries_python/output_74_0.png)
+![png](/_posts/timeseries_python/output_74_0.png)
 
 
 ##### Checking data stationarity 
@@ -930,7 +930,7 @@ print("mean_squared_log_error >>>",mean_squared_log_error(y_hat_avg['Count'], y_
 ```
 
 
-![png](/timeseries_python/output_81_0.png)
+![png](/_posts/timeseries_python/output_81_0.png)
 
 
     r2_score >>> 0.6179264938889601
@@ -1142,7 +1142,7 @@ plt.plot(y_hat_avg1['auto_arima'], label='auto_arima')
 
 
 
-![png](/timeseries_python/output_86_1.png)
+![png](/_posts/timeseries_python/output_86_1.png)
 
 
 
