@@ -6,7 +6,7 @@ subtitle: Keen learner with passion for Data Science and Machine learning levera
 
 My name is **Ashwin K** and I currently work as a Machine Learning Engineer with total 4+ years of experience gaining hands-on knowledge in various fields like Analytics,Machine learning,Python,Big Data - Engineering & Processing frameworks,Database systems etc.  This is my personal blog where you can find some of my work related to Data Science and related fields with the intention to learn, share and connect.
 
-### Connect
+### Connect via:
 - [Linkedin](https://www.linkedin.com/in/ashwin-k-12a15a42/)
 - [Github](https://github.com/Ashwin-ks)
 
@@ -21,11 +21,11 @@ My name is **Ashwin K** and I currently work as a Machine Learning Engineer with
 - Passionate about data with great interest in using Data Science methodologies to solve business problems,continuous learner developing skills to become competent in Deep Learning and NLP.
 
 
-### My Certifications
+### My Certifications:
 
 - [Machine learning by Stanford University](https://www.coursera.org/account/accomplishments/verify/Q6GM9KG9ZR6C)
 - [Inferential Statistics by Duke University](https://www.coursera.org/account/accomplishments/verify/FW3MSHLLE27N)
-- [Mathematics for Machine Learning: Multivariate Calculus](https://www.coursera.org/account/accomplishments/verify/B7HVC3QGQM8G
+- [Mathematics for Machine Learning: Multivariate Calculus](https://www.coursera.org/account/accomplishments/verify/B7HVC3QGQM8G)
 - [Mathematics for Machine Learning: Linear Algebra](https://www.coursera.org/account/accomplishments/verify/KH6C6G8KY9GY)
 - [Applied Machine Learning in Python by University of Michigan](https://www.coursera.org/account/accomplishments/verify/VK8CLK6QL9QG)
 - [Applied Plotting, Charting & Data Representation in Python](https://www.coursera.org/account/accomplishments/verify/DD7TSCDNN392)
