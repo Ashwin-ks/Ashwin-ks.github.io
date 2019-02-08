@@ -1,3 +1,9 @@
+---
+.......
+bigimg: 
+  - "/img/cricket.png" : "comment"
+---  
+
 # --- General options --- #
 
 # url is the full website URL
@@ -7,11 +13,6 @@
 url: "http://ashwin-ks.github.io"
 baseurl: ""
 
----
-.......
-bigimg: 
-  - "/img/cricket.png" : "comment"
----  
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
