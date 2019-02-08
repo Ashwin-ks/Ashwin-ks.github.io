@@ -6,7 +6,6 @@
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://ashwin-ks.github.io"
 baseurl: ""
-background-image: url('/img/cricket.png')
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://username.github.io/projectname"
@@ -24,7 +23,7 @@ description: Learning experience of an aspiring Data Scientist
 
 # List of links in the navigation bar
 navbar-links:
-  About Me/Certifications: "aboutme"
+  About Me: "aboutme"
   Profiles:
     - LinkedIn: "https://www.linkedin.com/in/ashwin-k-12a15a42/"
     - Github: "https://github.com/Ashwin-ks/"
@@ -36,7 +35,7 @@ avatar: "/img/avatar-icon.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: "/image/image1.jpg"
+# title-img: "/image/ashwin.png"
 
 # --- Footer options --- #
 
