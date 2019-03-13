@@ -431,7 +431,7 @@ train_df.dtypes.value_counts().plot(kind='bar')
 
 
 
-![png](output_12_1.png)
+![png](/mmt_ml_challenge/output_12_1.png)
 
 
 We know our target variable is 'P' and lets see the class distribution to identify if its skewed or balanced.
@@ -450,7 +450,7 @@ sns.countplot(x='P',data=train_df)
 
 
 
-![png](output_14_1.png)
+![png](/mmt_ml_challenge/output_14_1.png)
 
 
 
@@ -627,7 +627,7 @@ numgrid
 
 
 
-![png](output_33_1.png)
+![png](/mmt_ml_challenge/output_33_1.png)
 
 
 
@@ -648,7 +648,7 @@ numgrid
 
 
 
-![png](output_34_1.png)
+![png](/mmt_ml_challenge/output_34_1.png)
 
 
 Both train and test data seems to have similar distribution and therefore no covariate shift in data.
@@ -690,7 +690,7 @@ density_plot(train_df[numerical+['P']])
 ```
 
 
-![png](output_38_0.png)
+![png](/mmt_ml_challenge/output_38_0.png)
 
 
 
@@ -717,7 +717,7 @@ g.add_legend()
 
 
 
-![png](output_39_1.png)
+![png](/mmt_ml_challenge/output_39_1.png)
 
 
 
@@ -738,7 +738,7 @@ g = g.map(boxplot, 'P','value')
 ```
 
 
-![png](output_42_0.png)
+![png](/mmt_ml_challenge/output_42_0.png)
 
 
 
@@ -1382,7 +1382,7 @@ feat_imp.sort_values(by=['Feature_importance'],ascending=False).set_index('Colum
 
 
 
-![png](output_76_1.png)
+![png](/mmt_ml_challenge/output_76_1.png)
 
 
 The importance of feature I and J with low cardinalty is evident from the contingency plots of variable classes with the target value plotted above and it has been considered important in tree building process for splits whereas high cardinal features have less importance
@@ -1726,7 +1726,7 @@ feat_imp.sort_values(by=['Feature_importance'],ascending=False).set_index('Colum
 
 
 
-![png](output_87_1.png)
+![png](/mmt_ml_challenge/output_87_1.png)
 
 
 #### LightGBM
@@ -2044,7 +2044,7 @@ feat_imp.sort_values(by=['Feature_importance'],ascending=False).set_index('Colum
 
 
 
-![png](output_95_1.png)
+![png](/mmt_ml_challenge/output_95_1.png)
 
 
 
@@ -2442,7 +2442,7 @@ feat_imp.sort_values(by=['Feature_importance'],ascending=False).set_index('Colum
 
 
 
-![png](output_125_1.png)
+![png](/mmt_ml_challenge/output_125_1.png)
 
 
 From the feature importances obtained we'll use the top 15 interaction terms for further modelling.
