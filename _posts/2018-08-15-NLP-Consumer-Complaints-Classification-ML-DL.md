@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NLP - Consumer Complaints Classification using Machine learning and Deep Learning.
-subtitle: Perform analysis on text data and utilize various text processing techniques and word embedding techniques such as GloVe to classify complaints of different departments using Machine Learning and Deep Learning.Infrastructure:-6 core vCPU’s with Nvidia Tesla K80 GPU(modules:-scikit-learn,keras,nltk,textblob,pandas,matplotlib,seaborn,wordcloud)   
+subtitle: Perform analysis on text data and utilize various text processing techniques and word embedding techniques such as GloVe to classify complaints of different departments using Machine Learning and Deep Learning. Infrastructure:- 6 core vCPU’s with Nvidia Tesla K80 GPU.(modules:-scikit-learn,keras,nltk,textblob,pandas,matplotlib,seaborn,wordcloud)   
 
 bigimg: /img/nlp1.png
 ---
