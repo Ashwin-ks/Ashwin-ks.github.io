@@ -77,6 +77,7 @@ Follow the below steps to download and move raw data from local file system to h
 
 
 ###### Download the dataset
+```bash
 [hadoop@test-ser-vm01 pamap2]$ wget http://archive.ics.uci.edu/ml/machine-learning-databases/00231/PAMAP2_Dataset.zip   
 [hadoop@test-ser-vm01 pamap2]$ unzip PAMAP2_Dataset.zip
 [hadoop@test-ser-vm01 pamap2]$ cd PAMAP2_Dataset
@@ -92,9 +93,10 @@ total 1271440
 -rw-------. 1 hadoop hadoop 145823268 Jan 10  2012 subject107.dat
 -rw-------. 1 hadoop hadoop 190019653 Jan 10  2012 subject108.dat
 -rw-------. 1 hadoop hadoop   3891140 Jan 10  2012 subject109.dat
-
+```
 
 ###### Create directory in HDFS and copy files from local to HDFS
+```bash
 [hadoop@test-ser-vm01 Protocol]$ hadoop fs -mkdir /mnt/data/scripts/notebooks/ashwin/data
 [hadoop@test-ser-vm01 Protocol]$ hadoop dfs -put subject* /mnt/data/scripts/notebooks/ashwin/data
 [hadoop@test-ser-vm01 Protocol]$ hadoop fs -ls /mnt/data/scripts/notebooks/ashwin/data
@@ -108,9 +110,9 @@ Found 9 items
 -rw-r--r--   3 hadoop supergroup  145823268 2018-03-14 08:41 /mnt/data/scripts/notebooks/ashwin/data/subject107.dat
 -rw-r--r--   3 hadoop supergroup  190019653 2018-03-14 08:41 /mnt/data/scripts/notebooks/ashwin/data/subject108.dat
 -rw-r--r--   3 hadoop supergroup    3891140 2018-03-14 08:41 /mnt/data/scripts/notebooks/ashwin/data/subject109.dat
-
+```
 ###### Create HIVE external Table with schema and Load data
-
+```bash
 hive> CREATE SCHEMA IF NOT EXISTS test1;
 OK.
 
@@ -123,21 +125,28 @@ FIELDS TERMINATED BY ' '
 STORED AS TEXTFILE
 LOCATION '/mnt/data/scripts/notebooks/ashwin/data/';
 OK.
+```
 
 The import can be verified by listing the first few rows in the table:
+```bash
 hive> select * from test1.pamap2_table limit 2;
 OK
 8.38    0.0     104.0   30.0    2.37223 8.60074 3.51048 2.43954 8.76165 3.35465 -0.0922174      0.0568115       -0.0158445      14.6806 -69.2128        -5.58905       1.0      0.0     0.0     0.0     31.8125 0.23808 9.80003 -1.68896        0.265304        9.81549 -1.41344        -0.00506495     -0.00678097     -0.00566295     0.47196-51.0499 43.2903 1.0     0.0     0.0     0.0     30.3125 9.65918 -1.65569        -0.0997967      9.64689 -1.55576        0.310404        0.00830026      0.00925038     -0.0175803       -61.1888        -38.9599        -58.1438        1.0     0.0     0.0     0.0
 8.39    0.0     NaN     30.0    2.18837 8.5656  3.66179 2.39494 8.55081 3.64207 -0.0244132      0.0477585       0.00647434      14.8991 -69.2224        -5.82311       1.0      0.0     0.0     0.0     31.8125 0.31953 9.61282 -1.49328        0.234939        9.78539 -1.42846        0.013685        0.00148646      -0.0415218      1.0169 -50.3966 43.1768 1.0     0.0     0.0     0.0     30.3125 9.6937  -1.57902        -0.215687       9.6167  -1.6163 0.280488        -0.00657665     -0.00463778     3.6825E-4       -59.8479        -38.8919        -58.5253        1.0     0.0     0.0     0.0
 Time taken: 0.191 seconds, Fetched: 2 row(s)
+```
 ###### Create a HIVE managed ORC table to convert into orc format
+```bash
 hive> CREATE TABLE test1.pamap2_orc 
 (time DOUBLE, activity DOUBLE, heart_rate DOUBLE,hand_temp DOUBLE,hand_acc16g_1 DOUBLE, hand_acc16g_2 DOUBLE, hand_acc16g_3 DOUBLE, hand_acc6g_1 DOUBLE, hand_acc6g_2 DOUBLE, hand_acc6g_3 DOUBLE, hand_gyro_1 DOUBLE,hand_gyro_2 DOUBLE,hand_gyro_3 DOUBLE, hand_mag_1 DOUBLE, hand_mag_2 DOUBLE, hand_mag_3 DOUBLE, hand_orient_1 DOUBLE, hand_orient_2 DOUBLE, hand_orient_3 DOUBLE, hand_orient_4 DOUBLE,
 chest_temp DOUBLE,chest_acc16g_1 DOUBLE, chest_acc16g_2 DOUBLE, chest_acc16g_3 DOUBLE, chest_acc6g_1 DOUBLE, chest_acc6g_2 DOUBLE, chest_acc6g_3 DOUBLE, chest_gyro_1 DOUBLE,chest_gyro_2 DOUBLE,chest_gyro_3 DOUBLE, chest_mag_1 DOUBLE, chest_mag_2 DOUBLE, chest_mag_3 DOUBLE, chest_orient_1 DOUBLE, chest_orient_2 DOUBLE, chest_orient_3 DOUBLE, chest_orient_4 DOUBLE,
 ankle_temp DOUBLE,ankle_acc16g_1 DOUBLE, ankle_acc16g_2 DOUBLE, ankle_acc16g_3 DOUBLE, ankle_acc6g_1 DOUBLE, ankle_acc6g_2 DOUBLE, ankle_acc6g_3 DOUBLE, ankle_gyro_1 DOUBLE,ankle_gyro_2 DOUBLE,ankle_gyro_3 DOUBLE, ankle_mag_1 DOUBLE, ankle_mag_2 DOUBLE, ankle_mag_3 DOUBLE, ankle_orient_1 DOUBLE, ankle_orient_2 DOUBLE, ankle_orient_3 DOUBLE, ankle_orient_4 DOUBLE )
 STORED AS ORC;
-OKAs we have already loaded temporary table pampa2_table, it’s time to load the data from it to actual ORC table pampa2_orc.
+OK
+```
+As we have already loaded temporary table pampa2_table, it’s time to load the data from it to actual ORC table pampa2_orc.
 ###### Insert the data from the external table into the Hive-managed table.
+```bash
 hive> INSERT INTO TABLE test1.pamap2_orc SELECT * FROM test1.pamap2_table;
 
 Query ID = hadoop_20180314092522_71507bf7-1c30-4376-87cd-b38129a7f6a9
@@ -169,18 +178,18 @@ Stage-Stage-1: Map: 9   Cumulative CPU: 143.93 sec   HDFS Read: 1302077635 HDFS 
 Total MapReduce CPU Time Spent: 2 minutes 23 seconds 930 msec
 OK
 Time taken: 78.615 seconds
-
+```
 Verify the data import into ORC-formatted table: 
-
+```bash
 hive> select * from test1.pamap2_orc limit 2;
 OK
 5.64    0.0     NaN     33.0    2.79143 7.55389 -7.06374        2.87553 7.88823 -6.76139        1.0164  -0.28941        1.38207 -11.6508        -3.73683        31.17841.0      0.0     0.0     0.0     36.125  1.94739 9.59644 -3.12873        1.81868 9.49711 -2.91989        0.124025        0.112482        -0.0449469      -20.2905       -32.0492 8.67906 1.0     0.0     0.0     0.0     33.8125 9.84408 -0.808951       -1.64674        9.73055 -0.846832       -1.29665        -0.027148       -0.0311901     -0.0408973       -47.7695        -2.58701        59.8481 -0.0128709      0.747947        -0.0798406      0.658813
 5.65    0.0     NaN     33.0    2.86086 7.43814 -7.21626        2.84248 7.63164 -6.8514 1.08269 -0.393965       1.60935 -11.6575        -3.18648        30.7215 1.0    0.0      0.0     0.0     36.125  1.7512  9.6334  -3.32601        1.74445 9.69355 -2.96421        0.132679        0.0608292       -0.0441676      -20.6409        -31.69898.30648 1.0     0.0     0.0     0.0     33.8125 9.83968 -0.807666       -1.80115        9.73049 -0.816601       -1.31189        0.0128035       -0.0363842      -0.0148455      -47.7624        -2.81438        60.3407 0.0140248       -0.74841        0.0790426       -0.65836
 Time taken: 0.158 seconds, Fetched: 2 row(s)
 Successfuly converted into ORC format
+```
 
-
-```python
+```bash
 hive> describe formatted test1.pamap2_orc;
 OK
 # col_name              data_type               comment
@@ -227,6 +236,8 @@ Storage Desc Params:
 Time taken: 0.604 seconds, Fetched: 83 row(s)
 
 ```
+
+```bash
 [hadoop@test-ser-vm01 Protocol]$ hadoop fs -ls /user/hive/warehouse/test1.db/pamap2_orc
 Found 9 items
 -rwxr-xr-x   3 hadoop supergroup  202673523 2018-03-14 09:26 /user/hive/warehouse/test1.db/pamap2_orc/000000_0
@@ -238,7 +249,7 @@ Found 9 items
 -rwxr-xr-x   3 hadoop supergroup   27038160 2018-03-14 09:26 /user/hive/warehouse/test1.db/pamap2_orc/000006_0
 -rwxr-xr-x   3 hadoop supergroup   11794464 2018-03-14 09:26 /user/hive/warehouse/test1.db/pamap2_orc/000007_0
 -rwxr-xr-x   3 hadoop supergroup    4228488 2018-03-14 09:26 /user/hive/warehouse/test1.db/pamap2_orc/000008_0
-
+```
 ## Pyspark for data processing and Machine Learning
 
 Utilize SparkSQL and ml library to perform data pre-processing steps and machine learning to perform classification,
